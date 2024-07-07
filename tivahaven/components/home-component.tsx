@@ -26,20 +26,45 @@ import Image from "next/image"
 export default function homeComponent() {
   return (
       <div className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        {/* <section className="w-full">
           <div className="container grid items-center gap-8 px-4 md:px-6 lg:grid-cols-2 lg:gap-16">
             <Image
-              src="/placeholder.svg"
+              src="/home/products/rice-one.jpeg"
               width={600}
               height={600}
               alt="Baker"
               className="mx-auto aspect-square overflow-hidden rounded-xl object-cover object-center sm:w-full"
             />
             <div className="space-y-4">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Welcome to Tivas Haven</h1>
-              <p className="text-muted-foreground md:text-xl">
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">Welcome to Tivas Haven</h1>
+              <p className="text-foreground md:text-xl">
                 Indulge in the art of baking with our passion for creating delectable treats.
               </p>
+            </div>
+          </div>
+        </section> */}
+        <section className="bg-gradient-to-r from-primary to-secondary text-primary-foreground py-20 sm:py-32 rounded shadow-3xl">
+          <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight"><span className="">Tivas Haven</span>: Crafting Delicious <span className="font-bold text-primary">Moments</span></h1>
+            <p className="mt-4 max-w-3xl text-lg sm:text-xl">
+              Discover the art of baking with Bake Bliss, where we pour our passion into every creation. Indulge in our
+              mouthwatering treats and let us sweeten your day.
+            </p>
+            <div className="mt-8 flex gap-4">
+              <Link
+                href="#"
+                className="inline-flex items-center justify-center rounded bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                prefetch={false}
+              >
+                Explore Our Products
+              </Link>
+              <Link
+                href="#"
+                className="inline-flex items-center justify-center rounded border border-primary px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                prefetch={false}
+              >
+                Learn More
+              </Link>
             </div>
           </div>
         </section>
@@ -52,16 +77,16 @@ export default function homeComponent() {
               </p>
             </div>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl hover:-translate-y-2">
+              <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl hover:-translate-y-2 hover:bg-gradient-to-r from-primary to-secondary">
                 <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
                   <span className="sr-only">View</span>
                 </Link>
                 <Image
-                  src="/placeholder.svg"
+                  src="/home/products/cake-five.jpeg"
                   alt="Croissant"
                   width={500}
                   height={400}
-                  className="object-cover w-full h-64"
+                  className="object-cover w-full h-64 rounded-t hover:shadow-2xl"
                 />
                 <div className="p-4 bg-background">
                   <h3 className="text-xl font-bold">Buttery Croissants</h3>
@@ -70,32 +95,32 @@ export default function homeComponent() {
                   </p>
                 </div>
               </div>
-              <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl hover:-translate-y-2">
+              <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl hover:-translate-y-2 hover:bg-gradient-to-r from-primary to-secondary">
                 <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
                   <span className="sr-only">View</span>
                 </Link>
                 <Image
-                  src="/placeholder.svg"
+                  src="/home/products/cake-two.jpeg"
                   alt="Macarons"
                   width={500}
                   height={400}
-                  className="object-cover w-full h-64"
+                  className="object-cover w-full h-64 rounded-t hover:shadow-2xl"
                 />
                 <div className="p-4 bg-background">
                   <h3 className="text-xl font-bold">Delicate Macarons</h3>
                   <p className="text-muted-foreground">Vibrant, delicate macarons in a variety of flavors.</p>
                 </div>
               </div>
-              <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl hover:-translate-y-2">
+              <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl hover:-translate-y-2 hover:bg-gradient-to-r from-primary to-secondary">
                 <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
                   <span className="sr-only">View</span>
                 </Link>
                 <Image
-                  src="/placeholder.svg"
+                  src="/home/products/chocolate-cake.jpeg"
                   alt="Cupcakes"
                   width={500}
                   height={400}
-                  className="object-cover w-full h-64"
+                  className="object-cover w-full h-64 rounded-t hover:shadow-2xl"
                 />
                 <div className="p-4 bg-background">
                   <h3 className="text-xl font-bold">Decadent Cupcakes</h3>
@@ -117,14 +142,14 @@ export default function homeComponent() {
               </p>
               <Link
                 href="#"
-                className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                className="inline-flex h-9 items-center justify-center rounded bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 prefetch={false}
               >
                 Learn More
               </Link>
             </div>
             <Image
-              src="/placeholder.svg"
+              src="https://ik.imagekit.io/munchery/blog/tr:w-768/how-to-master-basics-of-baking-at-home.jpeg"
               width={600}
               height={600}
               alt="Baker's Story"
@@ -138,28 +163,28 @@ export default function homeComponent() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Gallery of Our Creations</h2>
               <div className="grid grid-cols-2 gap-4">
                 <Image
-                  src="/placeholder.svg"
+                  src="/home/products/buns-meat.jpeg"
                   alt="Gallery 1"
                   width={300}
                   height={300}
                   className="rounded-lg object-cover"
                 />
                 <Image
-                  src="/placeholder.svg"
+                  src="/home/products/chin-chin.jpeg"
                   alt="Gallery 2"
                   width={300}
                   height={300}
                   className="rounded-lg object-cover"
                 />
                 <Image
-                  src="/placeholder.svg"
+                  src="/home/products/buns-meat.jpeg"
                   alt="Gallery 3"
                   width={300}
                   height={300}
                   className="rounded-lg object-cover"
                 />
                 <Image
-                  src="/placeholder.svg"
+                  src="/home/products/rice-four.jpeg"
                   alt="Gallery 4"
                   width={300}
                   height={300}
@@ -168,14 +193,14 @@ export default function homeComponent() {
               </div>
               <Link
                 href="#"
-                className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                className="inline-flex h-9 items-center justify-center rounded bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 prefetch={false}
               >
                 View Gallery
               </Link>
             </div>
             <Image
-              src="/placeholder.svg"
+              src="/home/products/rice-two.jpeg"
               width={600}
               height={600}
               alt="Gallery Hero"
@@ -186,38 +211,38 @@ export default function homeComponent() {
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container grid gap-12 px-4 md:px-6">
             <div className="space-y-4 text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">From Our Baking Blog</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-secondary-foreground/50 hover:text-secondary-foreground">From Our Baking Blog</h2>
               <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Explore our latest blog posts for insights into the art of baking.
               </p>
             </div>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <article className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl hover:-translate-y-2">
+              <article className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl hover:-translate-y-2 hover:bg-gradient-to-r from-primary to-secondary">
                 <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
                   <span className="sr-only">Read Post</span>
                 </Link>
                 <Image
-                  src="/placeholder.svg"
+                  src="/home/products/cake-five.jpeg"
                   alt="Blog Post 1"
                   width={500}
                   height={400}
-                  className="object-cover w-full h-64"
+                  className="object-cover w-full h-64 rounded-t hover:shadow-2xl"
                 />
                 <div className="p-4 bg-background">
                   <h3 className="text-xl font-bold">Mastering the Art of Sourdough Bread</h3>
                   <p className="text-muted-foreground">Discover the secrets to creating the perfect sourdough loaf.</p>
                 </div>
               </article>
-              <article className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl hover:-translate-y-2">
+              <article className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl hover:-translate-y-2 hover:bg-gradient-to-r from-primary to-secondary">
                 <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
                   <span className="sr-only">Read Post</span>
                 </Link>
                 <Image
-                  src="/placeholder.svg"
+                  src="/home/products/rice-three.jpeg"
                   alt="Blog Post 2"
                   width={500}
                   height={400}
-                  className="object-cover w-full h-64"
+                  className="object-cover w-full h-64 rounded-t hover:shadow-2xl"
                 />
                 <div className="p-4 bg-background">
                   <h3 className="text-xl font-bold">The Science Behind Baking the Perfect Cake</h3>
@@ -226,16 +251,16 @@ export default function homeComponent() {
                   </p>
                 </div>
               </article>
-              <article className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl hover:-translate-y-2">
+              <article className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl hover:-translate-y-2 hover:bg-gradient-to-r from-primary to-secondary">
                 <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
                   <span className="sr-only">Read Post</span>
                 </Link>
                 <Image
-                  src="/placeholder.svg"
+                  src="https://roadfood.com/wp-content/uploads/2016/03/rfl_23349-360x250.jpg"
                   alt="Blog Post 3"
                   width={500}
                   height={400}
-                  className="object-cover w-full h-64"
+                  className="object-cover w-full h-64 rounded-t hover:shadow-2xl"
                 />
                 <div className="p-4 bg-background">
                   <h3 className="text-xl font-bold">The Versatility of Baking with Seasonal Ingredients</h3>
@@ -248,7 +273,7 @@ export default function homeComponent() {
             <div className="flex justify-center">
               <Link
                 href="#"
-                className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                className="inline-flex h-9 items-center justify-center rounded bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 prefetch={false}
               >
                 View All Posts
@@ -274,7 +299,7 @@ export default function homeComponent() {
               </form>
             </div>
             <Image
-              src="/placeholder.svg"
+              src="https://lyndells.com/wp-content/themes/lyndells-wptheme%20v1.0/img/banner-contact-500x340.jpg"
               width={600}
               height={600}
               alt="Contact"
