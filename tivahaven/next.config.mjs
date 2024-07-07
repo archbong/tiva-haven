@@ -13,6 +13,14 @@ const nextConfig = {
             {
                 protocol: "https",
                 hostname: "ik.imagekit.io"
+            },
+            {
+                protocol: "https",
+                hostname: "images.unsplash.com"
+            },
+            {
+                protocol: "https",
+                hostname: "www.bakingbusiness.com"
             }
         ],
     }
